@@ -65,18 +65,3 @@ var twoSum = function (nums, target) {
 };
 
 console.log(twoSum([6, 8, 9, 3, 3], 6)); // [ 3, 4 ]
-
-function getMinOperations(arr) {
-  let count = 0;
-  for (let i = 1; i < arr.length - 1; i++) {
-    if (arr[i - 1] === arr[i + 1] && arr[i] !== arr[i - 1]) {
-      count++;
-      arr[i]++;
-    }
-  }
-  return count;
-}
-
-const arr = [2, 1, 2, 1, 2, 1, 2];
-const minOperations = getMinOperations(arr);
-console.log(minOperations);
