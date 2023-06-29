@@ -64,4 +64,14 @@ var twoSum = function (nums, target) {
   }
 };
 
-console.log(twoSum([6, 8, 9, 3, 3], 6)); // [ 3, 4 ]
+const twoSum = (nums, target) => {
+  const map = new Map();
+  for (const [index, num] of nums.entries()) {
+    const sub = target - num;
+    if (map.has(sub)) {
+      return [map.get(sub), index];
+    }
+    map.set(num, index);
+  }
+};
+
